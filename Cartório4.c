@@ -122,6 +122,10 @@ int deletar(){ // Função responsável por deletar os usuários no sistema.
 	}
 }
 
+int sair(){
+	printf("Obrigado por utilizar o sistema.\n");
+}
+
 int main (){
 	
 	int opcao=0; // Definindo variáveis.
@@ -137,7 +141,8 @@ int main (){
 		printf("Escolha a opção desejada do menu:\n\n");
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar nomes\n");
-		printf("\t3 - Deletar nomes\n\n"); 
+		printf("\t3 - Deletar nomes\n");
+		printf("\t4 - Sair do sistema\n\n"); 
 		printf("Opção: "); // Fim do menu
 	
 		scanf("%d", &opcao); // Armazenando a escolha do usuário.
@@ -153,6 +158,10 @@ int main (){
 				break;
 			case 3:
 				deletar(); // Chamada da função "deletar".
+				break;
+			case 4:
+				sair();
+				return 0;
 				break;
 			default:
 				printf("Essa opção não está disponivel.\n");
